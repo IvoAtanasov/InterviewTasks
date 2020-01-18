@@ -21,19 +21,9 @@ namespace InterviewTasks.Task18_01_2020
             bool oneInMind = false;
             int firstLenght = FirstNumber.Length;
             int secondLenght = SecondNumber.Length;
-            int loopEnd = 0;
+            int loopEnd = SetLoopEnd(firstLenght, secondLenght);
 
-            if (firstLenght > secondLenght)
-            {
-                loopEnd = firstLenght;
-                SecondNumber = LeadingZeros(firstLenght - secondLenght) + SecondNumber;
-            }
-            else
-            {
-                loopEnd = secondLenght;
-                FirstNumber = LeadingZeros(secondLenght - firstLenght) + FirstNumber;
-            }
-            for (int i = loopEnd-1; i >= 0; i--)
+            for (int i = loopEnd - 1; i >= 0; i--)
             {
                 int currentSum = int.Parse(FirstNumber[i].ToString()) + int.Parse(SecondNumber[i].ToString());
                 if (oneInMind)
@@ -44,9 +34,9 @@ namespace InterviewTasks.Task18_01_2020
                 switch (currentSum)
                 {
                     case 0: result.Append("0"); break;
-                    case 1:result.Append("1");break;
+                    case 1: result.Append("1"); break;
                     case 2: result.Append("0"); oneInMind = true; break;
-                    case 3: result.Append("1"); oneInMind = true;break;
+                    case 3: result.Append("1"); oneInMind = true; break;
                     default: throw new ArgumentException("Inccorrect operation");
                 }
             }
@@ -54,7 +44,24 @@ namespace InterviewTasks.Task18_01_2020
             {
                 result.Append("1");
             }
-            return ReverseString( result.ToString());
+            return ReverseString(result.ToString());
+        }
+
+        private int SetLoopEnd(int firstLenght, int secondLenght)
+        {
+            int loopEnd;
+            if (firstLenght > secondLenght)
+            {
+                loopEnd = firstLenght;
+                SecondNumber = LeadingZeros(firstLenght - secondLenght) + SecondNumber;
+            }
+            else
+            {
+                loopEnd = secondLenght;
+                FirstNumber = LeadingZeros(secondLenght - firstLenght) + FirstNumber;
+            }
+
+            return loopEnd;
         }
 
         private string LeadingZeros(int numberOfZeos)
