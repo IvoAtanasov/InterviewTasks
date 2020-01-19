@@ -10,14 +10,17 @@ namespace InterviewTasks.Task14_01_2020
         {
             string result = string.Empty;
             List<int> previousArr = new List<int>();
-            for(int rowlen = 1; rowlen < row; rowlen++)
+            for(int rowlen = 1; rowlen <= row; rowlen++)
             {
                 int[] potArr = new int[rowlen];
                 if (previousArr.Count == 0)
                 {
                     potArr[0] = 1;
                 }
-                potArr = ReturnArr(previousArr);
+                else
+                {
+                    potArr = ReturnArr(previousArr);
+                }
                 if (row == rowlen)
                 {
                     result = string.Join(",", potArr);
@@ -38,7 +41,10 @@ namespace InterviewTasks.Task14_01_2020
                 {
                     result[i] = 1;
                 }
-                result[i] = previousArr[i - 1] + previousArr[i];
+                else
+                {
+                    result[i] = previousArr[i - 1] + previousArr[i];
+                }
             }
             return result;
         }

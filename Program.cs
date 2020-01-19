@@ -9,7 +9,8 @@ namespace InterviewTasks
         static void Main(string[] args)
         {
             // Console.WriteLine("Hello World!");
-           // CallSumBinary();
+            // CallSumBinary();
+            PascalTriangleRow();
         }
 
         private static void PascalTriangleRow()
