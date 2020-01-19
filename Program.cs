@@ -12,17 +12,33 @@ namespace InterviewTasks
             // Console.WriteLine("Hello World!");
             // CallSumBinary();
             //PascalTriangleRow();
-            try
+            string repeat = "y";
+            while (repeat != "n")
             {
-               
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Handled exception: " + ex.Message);
+                try
+                {
+                    NumberOfOperations();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Handled exception: " + ex.Message);
+                }
+                Console.WriteLine("Continue Y/N:");
+                repeat = Console.ReadLine().ToLower();
             }
         }
 
-        
+        private static void NumberOfOperations()
+        {
+            int first = 0;
+            int second = 0;
+            Console.WriteLine("Enter First Number:");
+            first = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Second Number:");
+            second = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(String.Format("Result is {0}", MinOperations.NumberOfOperations(first,second)));
+        }
         private static void PascalTriangleRow()
         {
             int row = 0;
