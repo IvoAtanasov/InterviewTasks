@@ -1,4 +1,5 @@
-﻿using InterviewTasks.Task14_01_2020;
+﻿using InterviewTasks.Task12_01_2020;
+using InterviewTasks.Task14_01_2020;
 using InterviewTasks.Task18_01_2020;
 using System;
 
@@ -10,7 +11,15 @@ namespace InterviewTasks
         {
             // Console.WriteLine("Hello World!");
             // CallSumBinary();
-            PascalTriangleRow();
+            //PascalTriangleRow();
+            try
+            {
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Handled exception: " + ex.Message);
+            }
         }
 
         private static void PascalTriangleRow()
