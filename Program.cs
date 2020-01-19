@@ -22,6 +22,7 @@ namespace InterviewTasks
             }
         }
 
+        
         private static void PascalTriangleRow()
         {
             int row = 0;
