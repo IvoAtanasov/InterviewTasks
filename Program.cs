@@ -1,4 +1,5 @@
-﻿using InterviewTasks.Task18_01_2020;
+﻿using InterviewTasks.Task14_01_2020;
+using InterviewTasks.Task18_01_2020;
 using System;
 
 namespace InterviewTasks
@@ -8,9 +9,17 @@ namespace InterviewTasks
         static void Main(string[] args)
         {
             // Console.WriteLine("Hello World!");
-            CallSumBinary();
+           // CallSumBinary();
         }
 
+        private static void PascalTriangleRow()
+        {
+            int row = 0;
+            Console.WriteLine("Enter row number:");
+            row = int.Parse(Console.ReadLine());
+            Console.WriteLine(String.Format("Result is {0}", PascalTriangle.PascalTriangleRow(row)));
+
+        }
         private static void CallSumBinary()
         {
             string first = string.Empty;
