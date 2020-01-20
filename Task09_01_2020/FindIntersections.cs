@@ -6,6 +6,13 @@ namespace InterviewTasks.Task09_01_2020
 {
     public static class FindIntersections
     {
+        /// <summary>
+        /// Find intersection
+        /// </summary>
+        /// <param name="arr1">Best practice must bethe shortest of the tree</param>
+        /// <param name="arr2"></param>
+        /// <param name="arr3"></param>
+        /// <returns></returns>
         public static int FindTreeSortArrayIntersection(int[] arr1, int[] arr2, int[] arr3)
         {
             for (int i = 0; i < arr1.Length; i++)
