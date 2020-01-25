@@ -26,11 +26,30 @@ namespace InterviewTasks.Task21_01_2020
                
                 int digit = input / arabicNumber[i];
                 input = input % arabicNumber[i];
-                result.Append(ResolveArabic(digit, i, i + 1, i + 2));
+                if (i == 6)
+                {
+                    result.Append(ResolveArabic(digit, arabicNumber[i]));
+                }
+                else
+                {
+                    result.Append(ResolveArabic(digit, arabicNumber[i], arabicNumber[i + 1], arabicNumber[i + 2]));
+                }
             }
             return result.ToString();
         }
+        private static string ResolveArabic(int digit, int key)
+        {
+            string currentRome = MapNumbers[key];
+            string result = string.Empty;
+            switch (digit)
+            {
+                case 1: result = currentRome; break;
+                case 2: result = string.Concat(currentRome, currentRome); break;
+                case 3: result = string.Concat(currentRome, currentRome, currentRome); break;
 
+            }
+            return  result;
+        }
         private static string ResolveArabic(int digit, int key,int key5,int key10)
         {
             string currentRome = MapNumbers[key];

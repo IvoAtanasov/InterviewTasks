@@ -1,6 +1,7 @@
 ﻿using InterviewTasks.Task12_01_2020;
 using InterviewTasks.Task14_01_2020;
 using InterviewTasks.Task18_01_2020;
+using InterviewTasks.Task21_01_2020;
 using InterviewTasks.Task22_01_2020;
 using System;
 
@@ -19,7 +20,8 @@ namespace InterviewTasks
                 try
                 {
                     //NumberOfOperations();
-                    ReverseNumber();
+                    // ReverseNumber();
+                    ConvertToRomeNumber();
                 }
                 catch (Exception ex)
                 {
@@ -30,14 +32,19 @@ namespace InterviewTasks
             }
         }
 
-
+        private static void ConvertToRomeNumber()
+        {
+            int number = 0;
+            Console.WriteLine("Enter a number to convert to rome:");
+            number = int.Parse(Console.ReadLine());
+            Console.WriteLine(String.Format("Result is {0}", RomanNumber.ConvetToRoman(number)));
+        }
         private static void ReverseNumber()
         {
             int number = 0;
             Console.WriteLine("Enter a number:");
             number = int.Parse(Console.ReadLine());
             Console.WriteLine(String.Format("Result is {0}", ReverseInteger.Reverse(number)));
-
         }
         private static void NumberOfOperations()
         {
