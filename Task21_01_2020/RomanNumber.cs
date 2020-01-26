@@ -18,6 +18,7 @@ namespace InterviewTasks.Task21_01_2020
         };
         public static string ConvetToRoman(int input)
         {
+            ThrowException(input);
             StringBuilder result = new StringBuilder();
             int[] arabicNumber = new int[7];
             MapNumbers.Keys.CopyTo(arabicNumber, 0);
@@ -81,6 +82,13 @@ namespace InterviewTasks.Task21_01_2020
             }
             return result;
 
+        }
+        private static void ThrowException(int inputNumber)
+        {
+            if (inputNumber < 0 || inputNumber > 3999)
+            {
+                throw new ArgumentException("The inputnumber must be between 0 and 3999. " + inputNumber.ToString());
+            }
         }
     }
 }
