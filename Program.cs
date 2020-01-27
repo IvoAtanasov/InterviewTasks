@@ -20,8 +20,8 @@ namespace InterviewTasks
                 try
                 {
                     //NumberOfOperations();
-                    // ReverseNumber();
-                    ConvertToRomeNumber();
+                    //ReverseNumber();
+                   ConvertToRomeNumber();
                 }
                 catch (Exception ex)
                 {
