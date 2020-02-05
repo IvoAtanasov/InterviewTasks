@@ -16,6 +16,11 @@ namespace InterviewTasks.Task21_01_2020
             {500,"D"},
             {1000,"M"}
         };
+        /// <summary>
+        /// Convert number
+        /// </summary>
+        /// <param name="input">arabic number</param>
+        /// <returns></returns>
         public static string ConvetToRoman(int input)
         {
             ThrowException(input);
