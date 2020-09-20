@@ -19,11 +19,13 @@ namespace InterviewTasks.InvertBinaryTree
 
         public override string ToString()
         {
+            string leftChild = _leftNode == null ? string.Empty : _leftNode.ToString();
+            string rightChild = _rigthNode == null ? string.Empty : _rigthNode.ToString();
             if (this == null) 
             {
                 return string.Empty;
             }
-            return $" {_name} {Environment.NewLine} / \\ {Environment.NewLine} {_leftNode.ToString()} {_rigthNode.ToString()}";
+            return $" {_name} {Environment.NewLine} / \\ {Environment.NewLine} {leftChild} {rightChild}";
         }
     }
 }

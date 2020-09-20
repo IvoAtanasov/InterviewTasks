@@ -4,11 +4,12 @@ using System.Text;
 
 namespace InterviewTasks.InvertBinaryTree
 {
-    public class InvertBinaryTree
+    public static class InvertBinaryTree
     {
-        public void CreateBinaryTree()
-        { 
-            BinaryTree tree = new BinaryTree("a",new BinaryTree("b",),new BinaryTree("c"))
+        public static void CreateBinaryTree()
+        {
+            BinaryTree tree = new BinaryTree("a", new BinaryTree("b", new BinaryTree("d",null,null), new BinaryTree("e",null,null)), new BinaryTree("c", new BinaryTree("f", null, null), new BinaryTree("g", null, null)));
+            Console.WriteLine(tree.ToString());
         }
     }
 }
