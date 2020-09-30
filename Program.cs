@@ -1,9 +1,12 @@
-﻿using InterviewTasks.Task12_01_2020;
+﻿using InterviewTasks.AnagramsInString;
+using InterviewTasks.Task12_01_2020;
 using InterviewTasks.Task14_01_2020;
 using InterviewTasks.Task18_01_2020;
 using InterviewTasks.Task21_01_2020;
 using InterviewTasks.Task22_01_2020;
 using System;
+using System.Collections;
+using System.Linq;
 
 namespace InterviewTasks
 {
@@ -24,6 +27,11 @@ namespace InterviewTasks
                     //test checkin
                     //ConvertToRomeNumber();
                     //InvertBinaryTree.InvertBinaryTree.CreateBinaryTree();
+                    ArrayList result = Anagram.FindAnagramIndex("acdbacdacb", "abc");
+                    foreach (var index in result)
+                    {
+                        Console.WriteLine(index);
+                    }
                 }
                 catch (Exception ex)
                 {
